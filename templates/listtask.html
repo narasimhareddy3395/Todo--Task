@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Todo App</title>
+</head>
+<body>
+    <div>
+        <h2>Task lists</h2>
+        <ul>
+            {% for todo in res %}
+            <li style="font-size: 30pt">{{ todo }} <a href="{{ url_for('complete', id=todo.id) }}">Mark As Complete</a></li>
+            {% endfor %}    
+        </ul>
+    </div>
+</body>
+</html>
